@@ -2,20 +2,19 @@
 
 /**
  * _memset - fills memory with a constant byte
- * @s: is a pointer
- * @b: is a char
- * @n: is an unsigned int
- * Return: s
+ * @s: memory space to be filled
+ * @b: byte to fill with
+ * @n: number of spaces to fill
+ *
+ * Return: pointer to memory area s
  */
-
 char *_memset(char *s, char b, unsigned int n)
 {
-	int x;
+	unsigned int i;
 
-	for (x = 0; n > 0; n--)
+	for (i = 0; i < n; i++)
 	{
-		s[x] = b;
-		x++;
+		*(s + i) = b;
 	}
 	return (s);
 }
